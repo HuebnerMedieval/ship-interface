@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { fetchShip } from './actions/shipActions'
+import ShipParts from './containers/ShipParts'
 
 class App extends Component {
   componentDidMount() {
@@ -9,8 +10,12 @@ class App extends Component {
   }
 
   render() {
+
     return (
-      <div id="app">
+      <div className="App">
+        <h1 id="heading">Roci-NOT-eh Ship's Interface</h1>
+        <hr/>
+        < ShipParts />
       </div>
     )
   }
@@ -18,7 +23,7 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return {
-    ship: state.ship
+    ship: state.ship,
   }
 }
 const mapDispatchToProps = dispatch => {

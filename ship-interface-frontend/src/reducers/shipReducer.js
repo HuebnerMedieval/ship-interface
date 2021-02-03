@@ -3,13 +3,12 @@ const shipReducer = (state={ship: {hull: "checking", nav: "checking", weapons: "
         case 'LOADING_SHIP':
             return {
                 ...state,
-                ship: state.ship,
                 loading: true
             }
         case 'UPDATE_SHIP':
             return {
                 ...state,
-                ship: action.ship,
+                ship: action.payload,
                 loading: false
             }
         default:

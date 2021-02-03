@@ -5,6 +5,6 @@ export const fetchShip = () => {
         dispatch({type: "LOADING_SHIP"})
         fetch(shipURL)
         .then(resp => resp.json())
-        .then(shipData => dispatch({type: 'UPDATE_SHIP', ship: shipData}))
+        .then(shipData => dispatch({type: 'UPDATE_SHIP', payload: shipData}))
     }
 }
