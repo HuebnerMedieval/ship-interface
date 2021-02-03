@@ -1,3 +1,5 @@
-export default const crewReducer = (state={crew: [], loading: false }, action) => {
+const crewReducer = (state={crew: [], loading: false }, action) => {
 
 }
+
+export default crewReducer
