@@ -9,6 +9,7 @@ class ShipParts extends Component {
     render(){
         return (
             <div id="ship-parts">
+                <h3>Subsystems Status</h3>
                 < Hull status={this.props.ship.hull} />
                 < Nav status={this.props.ship.nav}/>
                 < Weapons status={this.props.ship.weapons}/>
