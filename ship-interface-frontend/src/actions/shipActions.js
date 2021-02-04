@@ -10,6 +10,18 @@ export const fetchShip = () => {
     }
 }
 
-export const updateShip = () => {
-    
+export const updateShip = (ship) => {
+    console.log(ship)
+    return (dispatch) => {
+        // dispatch({type: "LOADING_SHIP"})
+        fetch(shipURL, {
+            method: "PATCH",
+            body: JSON.stringify(ship),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        // .then(resp => resp.json())
+        // .then(shipData => dispatch({type: 'UPDATE_SHIP', payload: shipData}))
+    }
 }

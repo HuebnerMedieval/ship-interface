@@ -1,12 +1,16 @@
 import React, { Component } from 'react'
+// import { updateShip } from '../actions/shipActions'
 
 export default class Hull extends Component {
+    
     handleDamage = () => {
-        console.log("Hull Damaged!")
+        this.props.applyDamage()
+        this.props.updateShip()
     }
 
     handleRepair = () => {
-        console.log("All Better")
+        this.props.applyRepair()
+        this.props.updateShip()
     }
     
     render() {
@@ -14,8 +18,8 @@ export default class Hull extends Component {
             <div className="ship-system">
                 <p id="hull-status">
                     Hull Status: {this.props.status} 
-                    <button onClick={this.handleDamage}>Damage Hull</button> 
-                    <button onClick={this.handleRepair}>Repair Hull</button> 
+                    {/* <button onClick={this.handleDamage}>Damage Hull</button> 
+                    <button onClick={this.handleRepair}>Repair Hull</button>  */}
                 </p>
             </div>
         )

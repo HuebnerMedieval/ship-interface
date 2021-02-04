@@ -26,10 +26,5 @@ const mapStateToProps = state => {
     ship: state.ship,
   }
 }
-const mapDispatchToProps = dispatch => {
-  return {
-    fetchShip: () => dispatch(fetchShip())
-  }
-}
 
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+export default connect(mapStateToProps, { fetchShip })(App)
