@@ -36,7 +36,7 @@ class Buttons extends Component {
             </div>
             <div className="buttons"id="nav-buttons">
                 <button onClick={this.handleNavDamage}>Damage Navigation</button> 
-                <button onClick={this.handleNavRepair}>Repair Nagigation</button> 
+                <button onClick={this.handleNavRepair}>Repair Navigation</button> 
             </div>
             <div className="buttons"id="Weapons-buttons">
                 <button onClick={this.handleWeaponsDamage}>Damage Weapons</button> 
