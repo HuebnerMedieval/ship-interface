@@ -5,6 +5,7 @@ export default class Weapons extends Component {
         return(
             <div className="ship-system">
                 <p id="weapons-status">Weapons Status: {this.props.status}</p>
+                <li>{this.props.status === "green" ? "Torpedo Tubes Ready" : "Weapons Unavailable"}</li>
             </div>
         )
     }
