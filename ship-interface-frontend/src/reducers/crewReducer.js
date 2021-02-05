@@ -9,7 +9,7 @@ const crewReducer = (state={crew: [], loading: false }, action) => {
         case 'UPDATE_CREW':
             return {
                 ...state,
-                ship: action.payload,
+                crew: action.payload,
                 loading: false
             }
 
@@ -26,6 +26,19 @@ const crewReducer = (state={crew: [], loading: false }, action) => {
                 loading: false
             }
         
+        case 'REMOVE_CREW':
+            return {
+                ...state,
+                loading: true
+            }
+
+        case 'CREW_REMOVED':
+            const crew = state.crew.filter(crew => crew.id !== action.payload)
+            return{
+                ...state,
+                crew: [crew],
+                loading: false
+            }
         
         default:
             return state

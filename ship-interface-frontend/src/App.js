@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { fetchShip } from './actions/shipActions'
+import { fetchCrew } from './actions/crewActions'
 import ShipParts from './containers/ShipParts'
 import CrewContainer from './containers/CrewContainer'
 
 class App extends Component {
   componentDidMount() {
-    console.log("app mounted")
     this.props.fetchShip()
+    this.props.fetchCrew()
   }
 
   render() {
@@ -29,4 +30,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, { fetchShip })(App)
+export default connect(mapStateToProps, { fetchShip, fetchCrew })(App)

@@ -8,17 +8,12 @@ import Buttons from '../components/ship/Buttons'
 
 class ShipParts extends Component {
 
-    componentDidMount() {
-        console.log("ship parts mounted")
-      }
 
     componentDidUpdate(){
-        console.log(this.props.ship)
         this.props.updateShip(this.props.ship)
     }
 
     render(){
-        console.log("ship parts rendering")
         return (
             <div id="ship-parts">
                 <h3>Subsystems Status</h3>

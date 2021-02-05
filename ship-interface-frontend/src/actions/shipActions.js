@@ -11,7 +11,6 @@ export const fetchShip = () => {
 }
 
 export const updateShip = (ship) => {
-    console.log("action hull is " + ship.hull)
     return () => {
         // dispatch({type: "LOADING_SHIP"})
         fetch(shipURL, {

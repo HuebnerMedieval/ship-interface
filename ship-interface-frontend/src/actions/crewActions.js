@@ -21,6 +21,17 @@ export const addCrew = (crewmate) => {
             }
         })
         .then(resp => resp.json())
-        .then(crewmateData => dispatch({type: "CREW_ADDED"}))
+        .then(crewmateData => dispatch({type: "CREW_ADDED", payload: crewmateData}))
+    }
+}
+
+export const removeCrew = (id) => {
+    return (dispatch) => {
+        dispatch({type: "REMOVE_CREW"})
+        fetch(crewURL + `/${id}`, {
+            method: 'DELETE',
+        })
+        // .then(resp => resp.json())
+        .then(dispatch({type: "CREW_REMOVED", payload: id}))
     }
 }
