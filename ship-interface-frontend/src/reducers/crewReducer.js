@@ -36,7 +36,7 @@ const crewReducer = (state={crew: [], loading: false }, action) => {
             const crew = state.crew.filter(crew => crew.id !== action.payload)
             return{
                 ...state,
-                crew: [crew],
+                crew: crew,
                 loading: false
             }
         

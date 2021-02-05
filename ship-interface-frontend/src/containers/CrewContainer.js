@@ -12,7 +12,7 @@ class CrewContainer extends Component {
             <div id="crew-container">
                 <h3>Crew Status</h3>
                 < Crew crew={this.props.crew} removeCrew={this.props.removeCrew}/>
-                <CrewForm addCrew={this.props.addCrew}/>
+                < CrewForm addCrew={this.props.addCrew} />
             </div>
         )
     }

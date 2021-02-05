@@ -7,6 +7,7 @@ class Crewmate extends Component {
     }
     
     render() {
+        console.log(`rendering ${this.props.name}`)
         return (
             <div className="crewmate">
                 <li> Name: {this.props.name}
