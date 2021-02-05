@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class Weapons extends Component {
-    render() {
-        return(
-            <div className="ship-system">
-                <p id="weapons-status">Weapons Status: {this.props.status}</p>
-                <li>{this.props.status === "green" ? "Torpedo Tubes Ready" : "Weapons Unavailable"}</li>
-            </div>
-        )
-    }
+const Weapons = props => {
+    return(
+        <div className="ship-system">
+            <p id="weapons-status">Weapons Status: {props.status}</p>
+            <li>{props.status === "green" ? "Torpedo Tubes Ready" : "Weapons Unavailable"}</li>
+        </div>
+    )
 }
+
+export default Weapons
