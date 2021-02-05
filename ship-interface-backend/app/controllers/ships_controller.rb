@@ -1,3 +1,5 @@
+require 'pry'
+
 class ShipsController < ApplicationController
   before_action :set_ship, only: [:show, :update, :destroy]
 
@@ -26,6 +28,7 @@ class ShipsController < ApplicationController
 
   # PATCH/PUT /ships/1
   def update
+    # binding.pry
     if @ship.update(ship_params)
       render json: @ship
     else

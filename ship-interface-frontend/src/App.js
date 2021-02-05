@@ -2,20 +2,22 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { fetchShip } from './actions/shipActions'
 import ShipParts from './containers/ShipParts'
+import CrewContainer from './containers/CrewContainer'
 
 class App extends Component {
   componentDidMount() {
+    console.log("app mounted")
     this.props.fetchShip()
-    console.log(this.props.ship)
   }
 
   render() {
-
     return (
       <div className="App">
         <h1 id="heading">Roci-NOT-eh Ship's Interface</h1>
         <hr/>
         < ShipParts />
+        <hr/>
+        < CrewContainer />
       </div>
     )
   }
@@ -23,7 +25,7 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return {
-    ship: state.ship,
+    ship: state.ship.ship,
   }
 }
 

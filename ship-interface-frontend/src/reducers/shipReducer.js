@@ -15,11 +15,13 @@ const shipReducer = (state={ship: {hull: "checking", nav: "checking", weapons: "
 
         case 'APPLY_HULL_DAMAGE':
             let hdstatus = state.ship.hull
+            console.log("reducer action")
             if (state.ship.hull === "green"){
                 hdstatus = "yellow"
             }else if (state.ship.hull === "yellow"){
                 hdstatus = "red"
             } 
+            console.log(`status is ${hdstatus}`)
             return {
                 ...state,
                 ship: {
