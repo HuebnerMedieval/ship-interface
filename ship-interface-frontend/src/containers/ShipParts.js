@@ -27,8 +27,12 @@ class ShipParts extends Component {
                 < Nav status={this.props.ship.nav}/>
                 < Weapons status={this.props.ship.weapons}/>
                 < Buttons 
-                    applyDamage={this.props.applyHullDamage}
-                    applyRepair={this.props.applyHullRepair}
+                    applyHullDamage={this.props.applyHullDamage}
+                    applyHullRepair={this.props.applyHullRepair}
+                    applyNavDamage={this.props.applyNavDamage}
+                    applyNavRepair={this.props.applyNavRepair}
+                    applyWeaponsDamage={this.props.applyWeaponsDamage}
+                    applyWeaponsRepair={this.props.applyWeaponsRepair}
                     />
             </div>
         )
@@ -44,8 +48,12 @@ const mapStateToProps = state => {
 
   const mapDispatchToProps = dispatch => {
     return {
-        applyHullDamage: () => dispatch({type: 'APPLY_HULL_DAMAGE'}),
-        applyHullRepair: () => dispatch({type: 'APPLY_HULL_REPAIR'}),
+        applyHullDamage: () => dispatch({type: 'APPLY_DAMAGE', payload: "hull"}),
+        applyHullRepair: () => dispatch({type: 'APPLY_REPAIR', payload: "hull"}),
+        applyNavDamage: () => dispatch({type: 'APPLY_DAMAGE', payload: "nav"}),
+        applyNavRepair: () => dispatch({type: 'APPLY_REPAIR', payload: "nav"}),
+        applyWeaponsDamage: () => dispatch({type: 'APPLY_DAMAGE', payload: "weapons"}),
+        applyWeaponsRepair: () => dispatch({type: 'APPLY_REPAIR', payload: "weapons"}),
         updateShip: (ship) => dispatch(updateShip(ship))
     }
 }
