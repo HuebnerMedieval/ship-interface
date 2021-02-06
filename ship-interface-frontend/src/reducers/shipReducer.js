@@ -14,8 +14,8 @@ const shipReducer = (state={ship: {hull: "checking", nav: "checking", weapons: "
             }
 
         case 'APPLY_DAMAGE':
-            let dStatus
             let dKey = action.payload
+            let dStatus = state.ship.[dKey]
             console.log("reducer action")
             if (state.ship.[dKey] === "green"){
                 dStatus = "yellow"
@@ -32,8 +32,8 @@ const shipReducer = (state={ship: {hull: "checking", nav: "checking", weapons: "
             }
 
         case 'APPLY_REPAIR':
-            let rStatus
             let rKey = action.payload
+            let rStatus = state.ship.[rKey]
             if (state.ship.[rKey] === "red"){
                 rStatus = "yellow"
             }else if (state.ship.[rKey] === "yellow"){
