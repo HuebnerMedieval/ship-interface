@@ -7,6 +7,7 @@ import CrewContainer from './containers/CrewContainer'
 import { Route, BrowserRouter as Router} from 'react-router-dom'
 import NavBar from './components/NavBar'
 import Home from './components/Home'
+import './App.css'
 
 class App extends Component {
   componentDidMount() {
@@ -19,9 +20,9 @@ class App extends Component {
       <Router>
         <div className="App">
           <NavBar/>
-            <Route path="/" component={Home}/>
-            <Route exact path="/ship" component={ShipParts}/>
-            <Route exact path="/crew" component={CrewContainer}/>
+          <Route path="/" component={Home}/>
+          <Route exact path="/ship" component={ShipParts}/>
+          <Route exact path="/crew" component={CrewContainer}/>
         </div>
       </Router>
     )

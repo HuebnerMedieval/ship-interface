@@ -9,10 +9,10 @@ class CrewContainer extends Component {
     
     render(){
         return(
-            <div id="crew-container">
+            <div className="container">
                 <h3>Crew Status</h3>
-                < Crew crew={this.props.crew} removeCrew={this.props.removeCrew}/>
                 < CrewForm addCrew={this.props.addCrew} />
+                < Crew crew={this.props.crew} removeCrew={this.props.removeCrew}/>
             </div>
         )
     }

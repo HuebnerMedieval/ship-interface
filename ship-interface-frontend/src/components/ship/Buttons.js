@@ -30,17 +30,17 @@ class Buttons extends Component {
     render() {
         return (
         <div id="buttons">
-            <div className="buttons"id="hull-buttons">
-                <button onClick={this.handleHullDamage}>Damage Hull</button> 
-                <button onClick={this.handleHullRepair}>Repair Hull</button> 
+            <div>
+                <button className="damage" onClick={this.handleHullDamage}>Damage Hull</button> 
+                <button className="repair" onClick={this.handleHullRepair}>Repair Hull</button> 
             </div>
-            <div className="buttons"id="nav-buttons">
-                <button onClick={this.handleNavDamage}>Damage Navigation</button> 
-                <button onClick={this.handleNavRepair}>Repair Navigation</button> 
+            <div>
+                <button className="damage" onClick={this.handleNavDamage}>Damage Navigation</button> 
+                <button className="repair" onClick={this.handleNavRepair}>Repair Navigation</button> 
             </div>
-            <div className="buttons"id="Weapons-buttons">
-                <button onClick={this.handleWeaponsDamage}>Damage Weapons</button> 
-                <button onClick={this.handleWeaponsRepair}>Repair Weapons</button> 
+            <div>
+                <button className="damage" onClick={this.handleWeaponsDamage}>Damage Weapons</button> 
+                <button className="repair" onClick={this.handleWeaponsRepair}>Repair Weapons</button> 
             </div>
         </div>
         )

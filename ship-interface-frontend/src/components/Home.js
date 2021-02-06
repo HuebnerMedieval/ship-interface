@@ -2,7 +2,7 @@ import React from 'react'
 
 const Home = () => {
     return(
-        <div id="heading">
+        <div id="home">
             <h1>Roci-NOT-eh Ship's Interface</h1>
             <p>Use the buttons above to view Ship information</p>
         </div>
