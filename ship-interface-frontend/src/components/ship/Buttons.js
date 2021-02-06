@@ -2,46 +2,33 @@ import React, { Component } from 'react'
 
 class Buttons extends Component {
 
-    handleHullDamage = () => {
-        this.props.applyHullDamage()
+    handleDamage = event => {
+        this.props.applyDamage(event.target.name)
     }
 
-    handleHullRepair = () => {
-        this.props.applyHullRepair()
-    }
-
-    handleNavDamage = () => {
-        this.props.applyNavDamage()
-    }
-
-    handleNavRepair = () => {
-        this.props.applyNavRepair()
-    }
-
-    handleWeaponsDamage = () => {
-        this.props.applyWeaponsDamage()
-    }
-
-    handleWeaponsRepair = () => {
-        this.props.applyWeaponsRepair()
+    handleRepair = event => {
+        this.props.applyRepair(event.target.name)
     }
 
 
     render() {
         return (
         <div id="buttons">
+            
             <div>
-                <button className="damage" onClick={this.handleHullDamage}>Damage Hull</button> 
-                <button className="repair" onClick={this.handleHullRepair}>Repair Hull</button> 
+                <button className="damage" name="hull" onClick={this.handleDamage}>Damage Hull</button> 
+                <button className="repair" name="hull" onClick={this.handleRepair}>Repair Hull</button> 
             </div>
             <div>
-                <button className="damage" onClick={this.handleNavDamage}>Damage Navigation</button> 
-                <button className="repair" onClick={this.handleNavRepair}>Repair Navigation</button> 
+                <button className="damage" name="nav" onClick={this.handleDamage}>Damage Navigation</button> 
+                <button className="repair" name="nav" onClick={this.handleRepair}>Repair Navigation</button> 
             </div>
             <div>
-                <button className="damage" onClick={this.handleWeaponsDamage}>Damage Weapons</button> 
-                <button className="repair" onClick={this.handleWeaponsRepair}>Repair Weapons</button> 
+                <button className="damage" name="weapons" onClick={this.handleDamage}>Damage Weapons</button> 
+                <button className="repair" name="weapons" onClick={this.handleRepair}>Repair Weapons</button> 
             </div>
+
+
         </div>
         )
     }
