@@ -24,6 +24,12 @@ const NavBar = () => {
                 activeStyle={active}
             >Ship Subsystems</NavLink>
             <NavLink
+                to="/"
+                exact
+                style={link}
+                activeStyle={active}
+            >Clear Screen</NavLink>
+            <NavLink
                 to="/crew"
                 exact
                 style={link}
