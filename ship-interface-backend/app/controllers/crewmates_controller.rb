@@ -9,9 +9,9 @@ class CrewmatesController < ApplicationController
   end
 
   # GET /crewmates/1
-  def show
-    render json: @crewmate
-  end
+  # def show
+  #   render json: @crewmate
+  # end
 
   # POST /crewmates
   def create
@@ -25,13 +25,13 @@ class CrewmatesController < ApplicationController
   end
 
   # PATCH/PUT /crewmates/1
-  def update
-    if @crewmate.update(crewmate_params)
-      render json: @crewmate
-    else
-      render json: @crewmate.errors, status: :unprocessable_entity
-    end
-  end
+  # def update
+  #   if @crewmate.update(crewmate_params)
+  #     render json: @crewmate
+  #   else
+  #     render json: @crewmate.errors, status: :unprocessable_entity
+  #   end
+  # end
 
   # DELETE /crewmates/1
   def destroy

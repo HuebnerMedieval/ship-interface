@@ -14,7 +14,6 @@ class Buttons extends Component {
     render() {
         return (
         <div id="buttons">
-            
             <div>
                 <button className="damage" name="hull" onClick={this.handleDamage}>Damage Hull</button> 
                 <button className="repair" name="hull" onClick={this.handleRepair}>Repair Hull</button> 

@@ -4,11 +4,11 @@ class ShipsController < ApplicationController
   before_action :set_ship, only: [:show, :update, :destroy]
 
   # GET /ships
-  def index
-    @ships = Ship.all
+  # def index
+  #   @ships = Ship.all
 
-    render json: @ships
-  end
+  #   render json: @ships
+  # end
 
   # GET /ships/1
   def show
@@ -16,15 +16,15 @@ class ShipsController < ApplicationController
   end
 
   # POST /ships
-  def create
-    @ship = Ship.new(ship_params)
+  # def create
+  #   @ship = Ship.new(ship_params)
 
-    if @ship.save
-      render json: @ship, status: :created, location: @ship
-    else
-      render json: @ship.errors, status: :unprocessable_entity
-    end
-  end
+  #   if @ship.save
+  #     render json: @ship, status: :created, location: @ship
+  #   else
+  #     render json: @ship.errors, status: :unprocessable_entity
+  #   end
+  # end
 
   # PATCH/PUT /ships/1
   def update
@@ -37,9 +37,9 @@ class ShipsController < ApplicationController
   end
 
   # DELETE /ships/1
-  def destroy
-    @ship.destroy
-  end
+  # def destroy
+  #   @ship.destroy
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
