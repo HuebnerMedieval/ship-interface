@@ -1,5 +1,6 @@
 import React from 'react'
 
+// landing page for the application with title and instructions
 const Home = () => {
     return(
         <div id="home">
