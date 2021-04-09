@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
 
+// displays the buttons for updating ship status
 class Buttons extends Component {
 
+    // sends dispatch when damage button is pressed
     handleDamage = event => {
         this.props.applyDamage(event.target.name)
     }
 
+    // sends dispatch when repair button is pressed
     handleRepair = event => {
         this.props.applyRepair(event.target.name)
     }
