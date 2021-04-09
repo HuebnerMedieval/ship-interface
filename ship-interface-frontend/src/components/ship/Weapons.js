@@ -1,5 +1,6 @@
 import React from 'react'
 
+// displays weapons information
 const Weapons = props => {
     return(
         <div className="ship-system">
