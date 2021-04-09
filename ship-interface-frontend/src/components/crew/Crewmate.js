@@ -1,6 +1,7 @@
 import React from 'react'
 import CrewButton from './CrewButton'
 
+// information on each individual crewmate
 const Crewmate = props => {
     return (
         <div className="crewmate">
