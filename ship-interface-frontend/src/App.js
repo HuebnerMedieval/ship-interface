@@ -10,11 +10,13 @@ import Home from './components/Home'
 import './App.css'
 
 class App extends Component {
+  // once mounted, retrieves ship and crew data from backend
   componentDidMount() {
     this.props.fetchShip()
     this.props.fetchCrew()
   }
 
+  // renders the navbar and links to each component
   render() {
     return (
       <Router>
