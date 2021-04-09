@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
+// CSS styling for the nav bar
 const link = {
     width: '100px',
     padding: '12px',
@@ -10,6 +11,7 @@ const link = {
     color: 'white'
 }
 
+// CSS for active button
 const active = {
     background: 'darkblue'
 }
