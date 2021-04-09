@@ -1,5 +1,6 @@
 import React from 'react'
 
+// displays hull information
 const Hull = props => {
     return(
         <div className="ship-system">
