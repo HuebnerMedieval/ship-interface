@@ -1,7 +1,9 @@
+/* centers the entire app */
 .App {
   text-align: center;
 }
 
+/* div around the navbar */
 #navbar {
   display: block;
   background-color: lightblue;
@@ -11,6 +13,7 @@
   margin: auto;
 }
 
+/* home component, always present */
 #home {
   display: block;
   background-color: lightblue;
@@ -21,6 +24,7 @@
 
 }
 
+/* styling for ship and crew containers */
 .container {
   display: block;
   width: 800px;
@@ -30,6 +34,7 @@
   margin: auto; 
 }
 
+/* styling for all systems */
 .ship-system {
   border: dashed red;
   width: 200px;
@@ -39,14 +44,17 @@
   background-color: lightblue;
 }
 
+/* damage button */
 .damage {
   background: lightcoral;
 }
 
+/* repair button */
 .repair {
   background: lightgreen;
 }
 
+/* div for each crewmate */
 .crewmate {
   border: dashed red;
   width: 300px;
@@ -55,6 +63,7 @@
   background-color: lightblue;
 }
 
+/* div for the crew form */
 #crew-form {
   border: dashed red;
   width: 300px;
