@@ -1,5 +1,7 @@
+// saves crew index route as constant
 const crewURL = "http://localhost:3001/crewmates"
 
+// grabs JSON for crew data and dispatches an 'UPDATE_CREW' action to the store with that data
 export const fetchCrew = () => {
     
     return (dispatch) => {
@@ -10,6 +12,7 @@ export const fetchCrew = () => {
     }
 }
 
+// sends data about new crewmember to the backend, then updates the store
 export const addCrew = (crewmate) => {
     return (dispatch) => {
         dispatch({type: "ADD_CREW"})
@@ -25,6 +28,7 @@ export const addCrew = (crewmate) => {
     }
 }
 
+// sends a delete request to the backend, then updates the store that a crewmember was removed
 export const removeCrew = (id) => {
     return (dispatch) => {
         dispatch({type: "REMOVE_CREW"})
