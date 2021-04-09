@@ -5,8 +5,10 @@ import CrewForm from '../components/crew/CrewForm'
 import { addCrew, removeCrew } from '../actions/crewActions'
 
 
+// holds all information about the crew
 class CrewContainer extends Component {
     
+    // renders the <CrewForm> followed by the list of crew
     render(){
         return(
             <div className="container">
@@ -18,6 +20,7 @@ class CrewContainer extends Component {
     }
 }
 
+// adds global state to the component's props
 const mapStateToProps = state => {
     return {
       crew: state.crew.crew
