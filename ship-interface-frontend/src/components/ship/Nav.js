@@ -1,5 +1,6 @@
 import React from 'react'
 
+// displays navigation information
 const Nav = props => {
     return(
         <div className="ship-system">
